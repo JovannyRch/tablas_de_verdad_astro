@@ -1,5 +1,102 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro." />
+<Layout title="Tablas de verdad">
+  <div class="wrapper bg-slate-50 w-full flex justify-center pt-2">
+    <div class="container flex gap-5">
+      <div class="intro w-full h-full flex flex-col justify-center gap-5">
+        <div>
+          <h1 class="title">
+            Resuelve Tablas de Verdad al Instante con
+            <span class="highlight">Tablas de Verdad App</span>
+          </h1>
+          <p class="text-slate-600 subtitle">
+            Una herramienta fácil de usar para estudiantes, ingenieros y
+            cualquiera interesado en la lógica proposicional.
+          </p>
+          <div class="flex gap-5 mt-8">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.jovannyrch.tablasdeverdad&hl=es&gl=US"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <img
+                src="/images/get-it-on-google-play-badge.svg"
+                alt=""
+                srcset=""
+              />
+            </a>
+          </div>
+        </div>
+        <div class="flex gap-10">
+          <div class="flex-col">
+            <div class="font-bold text-lg">200k+</div>
+            <div class="text-slate-600">Descargas</div>
+          </div>
+          <div class="flex-col">
+            <div class="font-bold text-lg">
+              4.5
+              <span class="text-slate-300">/ 5.0</span>
+            </div>
+            <div class="text-slate-600">Puntuación</div>
+          </div>
+        </div>
+      </div>
+      <div class="app-image w-full h-full flex items-center">
+        <img src="/images/mockup.png" alt="app-mockup" />
+      </div>
+    </div>
+  </div>
+  <div class="view bg-slate-200 w-full flex justify-center items-center">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <Card
+          title="Tablas de Verdad"
+          body="Resuelve tablas de verdad de cualquier tamaño y complejidad."
+          href="/images/undraw_mathematics_4otb.svg"
+        />
+        <Card
+          title="Simplificación"
+          body="Simplifica expresiones lógicas con leyes de la lógica proposicional."
+          href="/images/undraw_mathematics_4otb.svg"
+        />
+        <Card
+          title="Generador de expresiones"
+          body="Genera expresiones lógicas aleatorias para practicar."
+          href="/images/undraw_mathematics_4otb.svg"
+        />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .highlight {
+      color: rgb(var(--accent));
+    }
+
+    .wrapper {
+      height: calc(100vh - 80px);
+    }
+
+    .title {
+      font-size: 40px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+
+    .intro {
+    }
+
+    .app-image img {
+      height: 75vh;
+    }
+
+    .view {
+      height: 100vh;
+    }
+  </style>
+</Layout>
