@@ -1,0 +1,37 @@
+---
+interface Props {
+  text: string;
+  title: string;
+  icon: any;
+}
+
+const { text, title, icon } = Astro.props;
+---
+
+<div class="card-container">
+  <div class="card flex gap-4 items-center">
+    <div
+      class="card-icon flex items-center justify-center bg-slate-300 rounded-full"
+    >
+      {icon}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-slate-900">{title}</h5>
+      <p class="card-text text-slate-500 text-sm py-2">
+        {text}
+      </p>
+    </div>
+  </div>
+
+  <style>
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+    }
+
+    .card-text {
+      max-width: 300px;
+    }
+  </style>
+</div>

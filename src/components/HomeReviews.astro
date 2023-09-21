@@ -1,0 +1,30 @@
+---
+import Review from "./Review.astro";
+---
+
+<div
+  class="flex flex-col items-center gap-6 reviews-container justify-center w-1/2"
+>
+  <Review
+    text="Increíble, esta es una app muy útil en el caso de que tengamos ejercicios algo complicados o incluso comprobar nuestro resultado...."
+    username="Bruno Ramos Garavito"
+  />
+  <Review
+    text="Muy buena aplicación, me ayudo bastante, además de resultados , viene en la parte superior una explicación de los conectores."
+    username="Jorge Araya"
+  />
+  <Review
+    text="Sinceramente es una muy buena aplicación a mi en lo personal me ayudo bastante en mi tarea de lógica y argumentación además es facil de usarla y te da una breve explicación. Gracias a esta app conseguí una muy buena puntuación en la materia."
+    username="Den MH"
+  />
+</div>
+<style>
+  .title {
+    width: 100%;
+  }
+  .reviews-container {
+    height: calc(100vh - 160px);
+    position: relative;
+    z-index: 1;
+  }
+</style>

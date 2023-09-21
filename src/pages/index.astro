@@ -1,5 +1,6 @@
 ---
-import Card from "../components/Card.astro";
+import HomeCards from "../components/HomeCards.astro";
+import HomeReviews from "../components/HomeReviews.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="intro w-full h-full flex flex-col justify-center gap-5">
         <div>
           <h1 class="title">
-            Resuelve Tablas de Verdad al Instante con
+            El Compañero Definitivo para la Lógica Matemática
             <span class="highlight">Tablas de Verdad App</span>
           </h1>
           <p class="text-slate-600 subtitle">
@@ -51,22 +52,14 @@ import Layout from "../layouts/Layout.astro";
   </div>
   <div class="view bg-slate-200 w-full flex justify-center items-center">
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <Card
-          title="Tablas de Verdad"
-          body="Resuelve tablas de verdad de cualquier tamaño y complejidad."
-          href="/images/undraw_mathematics_4otb.svg"
-        />
-        <Card
-          title="Simplificación"
-          body="Simplifica expresiones lógicas con leyes de la lógica proposicional."
-          href="/images/undraw_mathematics_4otb.svg"
-        />
-        <Card
-          title="Generador de expresiones"
-          body="Genera expresiones lógicas aleatorias para practicar."
-          href="/images/undraw_mathematics_4otb.svg"
-        />
+      <div class="flex justify-center mt-10">
+        <h2 class="secction-title text-slate-800">
+          Por Qué Elegir Tablas de Verdad App
+        </h2>
+      </div>
+      <div class="flex gap-8 justify-center">
+        <HomeReviews />
+        <HomeCards />
       </div>
     </div>
   </div>
@@ -77,7 +70,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .wrapper {
-      height: calc(100vh - 80px);
+      min-height: calc(100vh - 80px);
     }
 
     .title {
@@ -96,7 +89,10 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .view {
-      height: 100vh;
+      min-height: 100vh;
+    }
+    .secction-title {
+      font-size: 40px;
     }
   </style>
 </Layout>

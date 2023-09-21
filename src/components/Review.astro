@@ -1,0 +1,34 @@
+---
+import Start from "./Start.astro";
+
+interface Props {
+  text: string;
+  username: string;
+}
+
+const { text, username } = Astro.props;
+---
+
+<div class="review py-4 px-2">
+  <div>
+    <div class="flex justify-between">
+      <span class="text-slate-900">
+        {username}
+      </span>
+      <Start />
+    </div>
+    <p class="text-slate-500 text-sm py-2">
+      {text}
+    </p>
+  </div>
+</div>
+
+<style>
+  .review {
+    min-height: 120px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+</style>
