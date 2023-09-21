@@ -27,6 +27,7 @@ import Layout from "../layouts/Layout.astro";
                 src="/images/get-it-on-google-play-badge.svg"
                 alt=""
                 srcset=""
+                class="google-play-image"
               />
             </a>
           </div>
@@ -63,6 +64,30 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </div>
+  <div class="view w-full bg-slate-50 flex justify-center items-center">
+    <div class="container flex items-center justify-center flex-col gap-16">
+      <h2 class="secction-title text-slate-800 w-1/2 text-center">
+        Descarga Ahora y Lleva Tu Comprensión de la Lógica al Siguiente Nivel
+      </h2>
+      <div class="flex gap-3">
+        <a
+          class="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 py-2 rounded-full flex items-center justify-center"
+          href="https://play.google.com/store/apps/details?id=com.jovannyrch.tablasdeverdad&hl=es&gl=US"
+          rel="nofollow"
+          target="_blank"
+        >
+          Descargar app
+        </a>
+        <a
+          class="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 py-2 rounded-full flex align-middle justify-center"
+          href="/calculator"
+          rel="nofollow"
+        >
+          Calculadora en línea
+        </a>
+      </div>
+    </div>
+  </div>
 
   <style>
     .highlight {
@@ -93,6 +118,9 @@ import Layout from "../layouts/Layout.astro";
     }
     .secction-title {
       font-size: 40px;
+    }
+    .google-play-image {
+      transform: translateX(-12px);
     }
   </style>
 </Layout>
